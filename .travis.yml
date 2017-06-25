@@ -3,4 +3,6 @@ node_js:
  - '4.0'
  - '8.1.2'
 
-script: npm run test_cover
+script: npm run test
+after_success:
+ - npm run coveralls

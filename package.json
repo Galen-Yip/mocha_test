@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "test_cover": "istanbul cover _mocha"
+    "test_cover": "istanbul cover _mocha",
+    "coveralls": "npm run test_cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "coveralls": "^2.13.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
     "should": "^11.2.1"
